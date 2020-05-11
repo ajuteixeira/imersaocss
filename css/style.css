@@ -1,0 +1,36 @@
+body {
+    background-image: url(../img/background.png);
+    background-size: 100vw 100vh;
+}
+
+.menu {
+    background-color: whitesmoke;
+    text-transform: uppercase;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.menu a {
+    color: #555;
+    text-decoration: none;
+}
+
+.site-title, .site-subtitle {
+    text-align: center;
+    color: #555;
+}
+
+.site-title{
+    text-transform: uppercase;
+}
+
+.site-subtitle {
+    font-size: small;
+    font-style: italic;
