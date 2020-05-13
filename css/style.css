@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,41 +14,52 @@ body {
     height: 100vh;
 }
 
-.header-container{
-    align-items: center;
+h2 {
+    padding-top: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.header-container {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    align-items: center;
     justify-content: center;
+    height: 90vh;
 }
 
 .menu {
-    background-color: whitesmoke;
-    letter-spacing: .1em;
     padding: 2.5em;
-    position: relative;
-    text-transform: uppercase;
     top: 0em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: whitesmoke;
 }
+
 .menu ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .menu li {
     list-style: none;
-    text-transform: uppercase;
 }
 
 .menu a {
-    color: #555;
     padding: 1em;
     text-decoration: none;
+    color: #555;
 }
 
 .menu a:hover {
-    color: lightsteelblue;
     font-weight: bolder;
+    color: lightsteelblue;
 }
 
 .header-title, .header-subtitle {
@@ -57,44 +68,50 @@ body {
 }
 
 .header-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 .header-subtitle {
-    font-size: .9em;
-    font-weight: normal;
-    letter-spacing: .1em;
     padding: 0;
+    font-family: 'Inconsolata', monospace;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: lowercase;
 }
 
-h2 {
-    color: #333;
-    font-weight: bolder;
-    padding: 3em;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.portfolio {
+.projetos {
+    height: 210vh;
     background-color: lightsteelblue;
-    height: 100vh;
+
 }
 
-.portfolio-container{
+.projetos-grid{
+    display: grid;
     align-items: center;
-    display: flex;
     justify-content: center;
+    height: 190vh;
 }
 
-.portfolio-img{
-    width: 100%;
-}
-
-figcaption{
-    font-weight: bold;
+.projetos-figure {
     text-align: center;
+  }
 
+.projetos-img{
+    height: 250px;
+    width: 90%;
+    object-fit: cover;
+}
+
+.projetos-caption{
+    width: 90%;
+    margin: 0 5%;
+    padding: 2em;
+    opacity: 70%;
+    justify-content: center;
+    background-color: whitesmoke;
 }
 
 @media (min-width:500px) {
@@ -114,5 +131,14 @@ figcaption{
 
     .header-subtitle {
         font-size: 1.5em;
+    }
+
+    .projetos {
+        height: 100vh;
+    }
+    .projetos-grid {
+        grid-template-columns: repeat(3, 30%);
+        gap: 1em;
+        height: 80vh;
     }
 }
