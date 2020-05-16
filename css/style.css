@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 12px;
-    height: 100vh;
+    min-height: 90vh;
 }
 
 h2 {
@@ -24,22 +24,24 @@ h2 {
     color: #333;
 }
 
-.header-container {
+.header-container, .about-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    min-height: 100vh;
 }
 
 .menu {
     padding: 2.5em;
     top: 0em;
+    position: fixed;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: .1em;
     text-transform: uppercase;
     background-color: whitesmoke;
+    width: 100%;
 }
 
 .menu ul {
@@ -55,10 +57,10 @@ h2 {
     padding: 1em;
     text-decoration: none;
     color: #555;
+    transition: .5s linear;
 }
 
 .menu a:hover {
-    font-weight: bolder;
     color: lightsteelblue;
 }
 
@@ -68,6 +70,7 @@ h2 {
 }
 
 .header-title{
+    padding-top: 2em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -81,31 +84,53 @@ h2 {
     letter-spacing: .1em;
     text-transform: lowercase;
 }
-
-.projetos {
-    height: 210vh;
+.about {
+    padding: 0 1em;
+    min-height: 80vh;
     background-color: lightsteelblue;
+}
+
+.about p{
+    padding: 1em 5em 5em 5em;
+    text-align: center;
+    font-size: 15px;
+    line-height: 2em;
+    color: #333;
 
 }
 
-.projetos-grid{
+.about img{
+    padding: 2em;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.projects {
+    min-height: 100vh;
+    background-color: lightslategrey;
+
+}
+
+.projects-grid{
     display: grid;
     align-items: center;
     justify-content: center;
     height: 190vh;
 }
 
-.projetos-figure {
+.projects-figure {
     text-align: center;
-  }
+}
 
-.projetos-img{
+.projects-img{
     height: 250px;
     width: 90%;
     object-fit: cover;
 }
 
-.projetos-caption{
+.projects-caption{
     width: 90%;
     margin: 0 5%;
     padding: 2em;
@@ -122,6 +147,27 @@ h2 {
     .header-subtitle {
         font-size: 1.1em;
     }
+
+    .about {
+        padding: 0 5em;
+    }
+
+    .about p{
+        padding: 1em 0 5em 1em;
+        text-align: left;
+        font-size: 1.1em;
+        line-height: 2em;
+        color: #333;
+        
+    }
+        
+    .about img{
+        float: left;
+        padding: 2em;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 @media (min-width:900px) {
@@ -133,10 +179,30 @@ h2 {
         font-size: 1.5em;
     }
 
-    .projetos {
+    .about {
+        padding: 0 5em;
+    }
+
+    .about p{
+        padding: 1em 5em 5em 5em;
+        text-align: center;
+        font-size: 15px;
+        line-height: 2em;
+        color: #333;
+        
+    }
+        
+    .about img{;
+        padding: 0;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    .projects {
         height: 100vh;
     }
-    .projetos-grid {
+    .projects-grid {
         grid-template-columns: repeat(3, 30%);
         gap: 1em;
         height: 80vh;
